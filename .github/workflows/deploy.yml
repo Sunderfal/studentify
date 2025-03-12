@@ -33,7 +33,6 @@ jobs:
     - name: codeDeploy
       run: |
         aws deploy create-deployment \
-          --application-name Springboot-App \
-          --deployment-group-name Grupo-App \
-          --github-location repository=${{ github.repository }} \
-          commitId=${{ github.sha }}
+          --application-name "Springboot-App" \
+          --deployment-group-name "Grupo-App" \
+          --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
